@@ -15,7 +15,7 @@
           inherit (final.callPackage "${uboot-nixpkgs}/pkgs/misc/uboot" { })
             ubootOdroidC4 ubootOdroidHC4;
           inherit (final.callPackage
-            "${uboot-nixpkgs}/pkgs/misc/uboot/hardkernel-firmware.nix" { })
+            "./hardkernel-firmware.nix" { })
             firmwareOdroidC2 firmwareOdroidC4;
         };
     };
