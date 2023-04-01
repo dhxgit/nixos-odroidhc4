@@ -7,7 +7,11 @@
           uboot-nixpkgs = final.applyPatches {
             name = "nixpkgs-hc4-defconfig";
             src = inputs.nixpkgs;
-            patches = [ ./hc4-uboot.patch ./hardkernel-firmware.patch ];
+            patches = [
+              ./hc4-uboot.patch
+              ./hardkernel-firmware.patch
+              ./meson64-tools.patch
+            ];
           };
         in {
           meson64-tools =
