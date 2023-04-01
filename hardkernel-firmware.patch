@@ -122,7 +122,7 @@ index 00000000000..d007f56d4a6
 +    src = fetchFromGitHub {
 +      owner = "hardkernel";
 +      repo = "u-boot";
-+      rev = "90ebb7015c1bfbbf120b2b94273977f558a5da46";
++      rev = "154ddfc826e72c902232169b676b2a4e59c75171";
 +      sha256 = "0kv9hpsgpbikp370wknbyj6r6cyhp7hng3ng6xzzqaw13yy4qiz9";
 +    };
 +
