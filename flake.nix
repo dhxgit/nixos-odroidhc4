@@ -7,7 +7,7 @@
           uboot-nixpkgs = final.applyPatches {
             name = "nixpkgs-hc4-defconfig";
             src = inputs.nixpkgs;
-            patches = [ ./hc4-uboot.patch ];
+            patches = [ ./hc4-uboot.patch ./hardkernel-firmware.patch ];
           };
         in {
           meson64-tools =
@@ -15,7 +15,7 @@
           inherit (final.callPackage "${uboot-nixpkgs}/pkgs/misc/uboot" { })
             ubootOdroidC4 ubootOdroidHC4;
           inherit (final.callPackage
-            "./hardkernel-firmware.nix" { })
+            "${uboot-nixpkgs}/pkgs/misc/uboot/hardkernel-firmware.nix" { })
             firmwareOdroidC2 firmwareOdroidC4;
         };
     };
