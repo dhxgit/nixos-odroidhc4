@@ -15,7 +15,7 @@
           };
         in {
           meson64-tools =
-            final.callPackage "${uboot-nixpkgs}/pkgs/misc/meson64-tools" { };
+            final.callPackage "${uboot-nixpkgs}/pkgs/misc/meson64-tools.nix" { };
           inherit (final.callPackage "${uboot-nixpkgs}/pkgs/misc/uboot" { })
             ubootOdroidC4 ubootOdroidHC4;
           inherit (final.callPackage

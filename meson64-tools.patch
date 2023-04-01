@@ -1,4 +1,4 @@
-diff --git a/pkgs/misc/meson64-tools/default.nix b/pkgs/misc/meson64-tools/default.nix
+diff --git a/pkgs/misc/meson64-tools/default.nix b/pkgs/misc/meson64-tools.nix
 new file mode 100644
 index 00000000000..87dfe314c6d
 --- /dev/null
