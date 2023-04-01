@@ -5,24 +5,11 @@ Date:   Sat Jun 25 22:34:36 2022 +0900
     Add HC4 uboot configuration
 
 diff --git a/pkgs/misc/uboot/default.nix b/pkgs/misc/uboot/default.nix
-index 2701addf5..8e9840a30 100644
+index a3600587250..45b8fd07ad5 100644
 --- a/pkgs/misc/uboot/default.nix
 +++ b/pkgs/misc/uboot/default.nix
-@@ -18,10 +18,10 @@
- }:
- 
- let
--  defaultVersion = "2021.01";
-+  defaultVersion = "2022.04";
-   defaultSrc = fetchurl {
-     url = "ftp://ftp.denx.de/pub/u-boot/u-boot-${defaultVersion}.tar.bz2";
--    sha256 = "0m04glv9kn3bhs62sn675w60wkrl4m3a4hnbnnw67s3l198y21xl";
-+    sha256 = "1l5w13dznj0z1ibqv2d6ljx2ma1gnf5x5ay3dqkqwxr6750nbq38";
-   };
-   buildUBoot = {
-     version ? null
-@@ -285,6 +285,44 @@ in {
-     extraMeta.platforms = ["aarch64-linux"];
+@@ -326,6 +326,44 @@ in {
+     '';
    };
  
 +  ubootOdroidHC4 = buildUBoot {
